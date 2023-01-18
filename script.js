@@ -23,16 +23,22 @@ let p0Score2 = 0;
 let p0Score3 = 0;
 let p0TotalScore = 0;
 
+// Dice roll
+function dieRoll() {
+  const result = Math.trunc(Math.random() * 6) + 1;
+  return result;
+}
+
 btnRoll.addEventListener('click', function () {
   // Remove previous highlight
   die1.classList.remove('highlight');
   die2.classList.remove('highlight');
   die3.classList.remove('highlight');
 
-  // Roll dice
-  const dieRoll1 = Math.trunc(Math.random() * 6) + 1;
-  const dieRoll2 = Math.trunc(Math.random() * 6) + 1;
-  const dieRoll3 = Math.trunc(Math.random() * 6) + 1;
+  // Roll dice and log results
+  const dieRoll1 = dieRoll();
+  const dieRoll2 = dieRoll();
+  const dieRoll3 = dieRoll();
   const rollResult = [dieRoll1, dieRoll2, dieRoll3];
   const highestRoll = Math.max(...rollResult);
   const highestRollDie = rollResult.indexOf(highestRoll) + 1;

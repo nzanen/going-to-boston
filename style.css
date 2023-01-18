@@ -71,5 +71,7 @@ h1 {
 }
 
 .highlight {
-  border: 5px solid rgb(13, 237, 13);
+  border: 5px solid rgb(17, 224, 17);
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
 }
