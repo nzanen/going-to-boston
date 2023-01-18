@@ -6,19 +6,6 @@ body {
   flex-direction: column;
 }
 
-/* Styling classes */
-h1 {
-  color: white;
-}
-
-.player--active {
-  background-color: rgb(216, 143, 40);
-}
-
-.hidden {
-  display: none;
-}
-
 /* Main section */
 main {
   background-color: rgb(189, 149, 92);
@@ -37,17 +24,16 @@ main {
 
 /* Middle section for dice and buttons */
 .middle {
-  margin: 0;
   position: absolute;
   top: 8rem;
   left: 50%;
   transform: translateX(-50%);
+  height: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid yellow;
-  height: 25rem;
+  gap: 2rem;
 }
 
 .dice {
@@ -58,6 +44,7 @@ main {
 
 .die {
   width: 5rem;
+  border: 5px solid rgba(0, 0, 0, 0);
 }
 
 .buttons {
@@ -67,6 +54,22 @@ main {
 }
 
 .btn {
-  border: 5px solid hotpink;
   font-size: 1.5rem;
+}
+
+/* Styling classes */
+h1 {
+  color: white;
+}
+
+.player--active {
+  background-color: rgb(216, 143, 40);
+}
+
+.hidden {
+  display: none;
+}
+
+.highlight {
+  border: 5px solid rgb(13, 237, 13);
 }
